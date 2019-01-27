@@ -1,15 +1,19 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
+import LogoImage from '../components/LogoImage'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO
       title="Home"
       keywords={[`code`, `africa`, `women`, `bootcamp`, `startup`, `tech`]}
     />
+
+    <LogoImage />
 
     <section>
       <h2>code:KAMPALA</h2>
@@ -27,21 +31,58 @@ const IndexPage = () => (
       <h3>Partners</h3>
       <ul>
         <li>
-          <Link to="https://www.etcafrica.org">Educating The Children</Link>
+          <a href="https://www.etcafrica.org">
+            <Img
+              fluid={data.partnerETC.childImageSharp.fluid}
+              alt="Educating The Children"
+            />
+          </a>
         </li>
         <li>
-          <Link to="https://www.innovationvillage.co.ug">
-            Innovation Village
-          </Link>
+          <a href="https://www.innovationvillage.co.ug">
+            <Img
+              fluid={data.partnerIV.childImageSharp.fluid}
+              alt="Innovation Village"
+            />
+          </a>
         </li>
         <li>
-          <Link to="https://www.thefundingnetwork.org.uk">
-            The Funding Network
-          </Link>
+          <a href="https://www.thefundingnetwork.org.uk">
+            <Img
+              fluid={data.partnerTFN.childImageSharp.fluid}
+              alt="The Funding Network"
+            />
+          </a>
         </li>
       </ul>
     </section>
   </Layout>
 )
+
+export const query = graphql`
+  query {
+    partnerETC: file(relativePath: { eq: "logo-etc.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    partnerIV: file(relativePath: { eq: "logo-the-innovation-village.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    partnerTFN: file(relativePath: { eq: "logo-the-funding-network.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
