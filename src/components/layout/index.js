@@ -6,11 +6,8 @@ import './reset.css'
 import theme from './theme'
 
 const StyledWrapper = styled.div`
-  background-color: ${props => props.theme.backgroundColour};
-  height: 100%;
   min-height: 100vh;
-  color: ${props => props.theme.textColour};
-  padding: 20px;
+  height: 100%;
 `
 
 const Layout = ({ children }) => (

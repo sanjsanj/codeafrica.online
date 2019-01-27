@@ -15,7 +15,8 @@ import styled from 'styled-components'
  */
 
 const StyledWrapper = styled.div`
-  margin: 100px auto;
+  background-color: ${props => props.theme.backgroundColour};
+  padding: 100px 20px;
 `
 
 const LogoImage = () => (
