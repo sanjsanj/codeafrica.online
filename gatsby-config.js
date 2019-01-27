@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `code:AFRICA`,
-    description: `Positive social change through coding for women.`,
+    description: `Positive social change in Africa through coding for women.`,
     author: `@sanj9000`,
   },
   plugins: [
@@ -18,11 +18,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `code:AFRICA`,
+        short_name: `code:AFRICA`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000`,
+        theme_color: `#ccc`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },

@@ -1,20 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 import './reset.css'
+import theme from './theme'
 
-const StyledLayout = styled.div`
-  background-color: black;
+const StyledWrapper = styled.div`
+  background-color: ${props => props.theme.backgroundColour};
+  height: 100%;
   min-height: 100vh;
-  min-width: 100vw;
+  color: ${props => props.theme.textColour};
+  padding: 20px;
 `
 
 const Layout = ({ children }) => (
-  <StyledLayout>
-    {children}
-    <footer>© {new Date().getFullYear()}</footer>
-  </StyledLayout>
+  <ThemeProvider theme={theme}>
+    <StyledWrapper>
+      {children}
+      <footer>© {new Date().getFullYear()}</footer>
+    </StyledWrapper>
+  </ThemeProvider>
 )
 
 Layout.propTypes = {
