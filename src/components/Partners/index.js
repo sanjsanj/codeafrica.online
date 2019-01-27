@@ -35,7 +35,7 @@ const Partners = () => (
     `}
     render={data => (
       <StyledSection>
-        <h3>Partners</h3>
+        <h3 style={{marginTop:"5vw"}}>Partners</h3>
         <ul>
           <li>
             <a href="https://www.etcafrica.org">
