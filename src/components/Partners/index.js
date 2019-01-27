@@ -46,7 +46,7 @@ const Partners = () => (
             </a>
           </li>
           <li>
-            <a href="https://www.innovationvillage.co.ug">
+            <a href="http://www.innovationvillage.co.ug">
               <Img
                 fluid={data.partnerIV.childImageSharp.fluid}
                 alt="Innovation Village"
