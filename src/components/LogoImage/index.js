@@ -17,6 +17,10 @@ import styled from 'styled-components'
 const StyledWrapper = styled.div`
   background-color: ${props => props.theme.backgroundColour};
   padding: 100px 20px;
+
+  @media (max-width: ${props => props.theme.mobileBreakpoint}) {
+    padding: 50px 20px;
+  }
 `
 
 const LogoImage = () => (

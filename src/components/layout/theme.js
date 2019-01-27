@@ -1,4 +1,5 @@
 export default {
   textColour: '#e6e6e6',
   backgroundColour: '#000',
+  mobileBreakpoint: '600px',
 }
