@@ -1,40 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
 
-import Header from '../Header'
-import './layout.css'
+import './reset.css'
+
+const StyledLayout = styled.div`
+  background-color: black;
+  min-height: 100vh;
+  min-width: 100vw;
+`
 
 const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          {children}
-          <footer>
-            © {new Date().getFullYear()}
-          </footer>
-        </div>
-      </>
-    )}
-  />
+  <StyledLayout>
+    {children}
+    <footer>© {new Date().getFullYear()}</footer>
+  </StyledLayout>
 )
 
 Layout.propTypes = {
