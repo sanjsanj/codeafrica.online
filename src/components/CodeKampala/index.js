@@ -4,7 +4,7 @@ import 'prismjs/themes/prism-tomorrow.css'
 import PrismCode from 'react-prism'
 import styled from 'styled-components'
 
-import { StyledSection } from '../Styles'
+import { StyledSection } from '../Styles/index'
 
 const StyledTitle = styled.h2`
   font-size: 1.6em;
