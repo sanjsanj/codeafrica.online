@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import { StyledSection } from '../Styles/index'
+import { StyledSection } from '../Styles'
 
 const Partners = () => (
   <StaticQuery

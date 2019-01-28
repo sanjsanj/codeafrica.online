@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Layout from '../components/Layout/index'
-import SEO from '../components/Seo/index'
-import LogoImage from '../components/LogoImage/index'
-import CodeKampala from '../components/CodeKampala/index'
-import Partners from '../components/Partners/index'
+import Layout from '../components/Layout'
+import SEO from '../components/Seo'
+import LogoImage from '../components/LogoImage'
+import CodeKampala from '../components/CodeKampala'
+import Partners from '../components/Partners'
 
 const IndexPage = ({ data }) => (
   <Layout>
